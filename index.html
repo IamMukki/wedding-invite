@@ -317,9 +317,21 @@
 
 <section id="video-bg" class="hidden-sm hidden-xs">
     <div id="bgndVideo" class="player"
-         data-property="{videoURL:'https://youtu.be/vq516Gz00nA',containment:'#video-bg',autoPlay:true, mute:true, showControls:false, height:100, width:100, startAt:35, stopAt:38, opacity:1}">
+         data-property="{videoURL:'https://youtu.be/vq516Gz00nA',containment:'#video-bg',autoPlay:true, mute:true, showControls:false, startAt:35, stopAt:38, opacity:1}">
     </div>
 </section>
+
+<script>
+  // Add this script below the video section
+  var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+  if (isMobile) {
+    var videoElement = document.getElementById('bgndVideo');
+    videoElement.setAttribute('data-property', '{videoURL:"https://youtu.be/vq516Gz00nA", containment:"#video-bg", mute:true, showControls:false, height:100, width:100, startAt:35, stopAt:38, opacity:1}');
+    videoElement.style.backgroundImage = "img/ring.gif"; // Add a poster image for mobile fallback
+  }
+</script>
+
 
 <section id="map" class="section-padding">
     <div class="text-center">
