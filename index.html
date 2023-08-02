@@ -321,20 +321,9 @@
     </div>
 </section>
 
-<script>
-  // Add this script below the video section
-  var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-
-  if (isMobile) {
-    var videoElement = document.getElementById('bgndVideo');
-    videoElement.setAttribute('data-property', '{videoURL:"https://youtu.be/vq516Gz00nA", containment:"#video-bg", mute:true, showControls:false, startAt:35, stopAt:38, opacity:1}');
-    videoElement.style.backgroundImage = "img/ring.gif"; // Add a poster image for mobile fallback
-  }
-</script>
-
-<section id="instagram" class="section-padding">
-    <div class="row section-border wp7">
-        <div class="col-md-4 col-md-offset-4">
+<section id="instagram" class="section-padding hidden-md hidden-lg">
+    <div class="container">
+        <div class="row section-border wp7">
             <img src="img/ring.gif">
         </div>
     </div>
